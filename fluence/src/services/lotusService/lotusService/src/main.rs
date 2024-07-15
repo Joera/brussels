@@ -39,9 +39,6 @@ pub fn main() {}
 #[marine]
 pub fn test() -> bool {
 
-   
-
-
     true
 }
 
