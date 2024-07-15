@@ -1,0 +1,12 @@
+[package]
+name = "lotus-effector-cid"
+version = "0.1.2"
+edition = "2021"
+build = "built.rs"
+publish = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[dependencies]
+
+[build-dependencies]
+built = "0.7.0"

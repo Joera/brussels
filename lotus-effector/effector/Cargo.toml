@@ -1,0 +1,16 @@
+[package]
+name = "lotus_effector"
+version = "0.1.2"
+edition = "2018"
+publish = false
+
+[dependencies]
+eyre = { workspace = true }
+log = "0.4.20"
+marine-rs-sdk = { workspace = true }
+lotus-effector-types = { workspace = true }
+
+[dev-dependencies]
+marine-rs-sdk-test = { workspace = true }
+env_logger = "0.10.0"
+test-env-helpers = "0.2.2"

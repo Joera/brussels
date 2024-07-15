@@ -1,0 +1,45 @@
+name: "tests"
+
+on:
+  pull_request:
+    paths-ignore:
+      - '**.md'
+      - '.github/**'
+      - '!.github/workflows/tests.yml'
+  push:
+    branches:
+      - "main"
+    paths-ignore:
+      - '**.md'
+      - '.github/**'
+      - '!.github/workflows/tests.yml'
+
+jobs:
+  unit-tests:
+    name: "Run unit tests"
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup IPFS CLI
+        uses: nahsi/setup-ipfs@v1
+
+      - name: Setup fcli
+        uses: fluencelabs/setup-fluence@v1
+        with:
+          # TODO: fluence module build now only in main, need to change later
+          version: main
+
+      - name: Setup Rust toolchain
+        uses: dsherret/rust-toolchain-file@v1
+
+      - name: Setup cargo-nextest
+        uses: taiki-e/install-action@nextest
+
+      - name: Build
+        run: ./build.sh
+
+      - name: Run tests
+        run: ./test.sh

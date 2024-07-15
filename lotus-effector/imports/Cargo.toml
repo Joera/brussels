@@ -1,0 +1,11 @@
+[package]
+name = "lotus-effector-imports"
+version = "0.1.2"
+edition = "2021"
+publish = true
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+lotus-effector-types = { workspace = true }
+marine-rs-sdk = { workspace = true }

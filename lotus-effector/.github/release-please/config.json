@@ -1,0 +1,12 @@
+{
+  "bootstrap-sha": "a5bed5fc40f29c1ea8493a6d259fb590d5b7e88e",
+  "release-type": "simple",
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": true,
+  "packages": {
+    ".": {
+        "package-name": "effector",
+        "compontent": "effector"
+    }
+  }
+}
