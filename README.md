@@ -1,5 +1,5 @@
 
-# Build image for Nox (Fluence peer) with a Lotus --lite node included
+### Build image for Nox (Fluence peer) with a Lotus --lite node included
 
 ```
 cd nox-with-lotus
@@ -7,14 +7,22 @@ docker build -t nox-with-lotus
 
 ```
 
-# Deploy local Fluence network with above images. 
+### Deploy local Fluence network with above images. 
 
 ```
+# first create the nox tomls with intended whitelisting
+fluence local up 
+# redeploy network with correct images 
 docker compose -f _docker-compose.yaml up -d
 
 ```
 
-# temp hacky solution: start lotus daemon manually 
+### temp hacky solution: start lotus daemon manually 
+
+you can use one of these api's. 
+wss://wss.node.glif.io/apigw/lotus
+wss://api.chain.love
+
 
 ```
 docker exec -ti fluence-nox-0-1 bash
