@@ -1,0 +1,16 @@
+[package]
+name = "lotusService"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "lotusService"
+path = "src/main.rs"
+
+[dependencies]
+marine-rs-sdk = "0.14.0"
+lotus-effector-imports = { path = "../../../../../lotus-effector/imports"}
+lotus-effector-types = { path = "../../../../../lotus-effector/types"}
+
+[dev-dependencies]
+marine-rs-sdk-test = "0.16.1"

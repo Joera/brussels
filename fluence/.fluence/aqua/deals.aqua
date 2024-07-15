@@ -8,10 +8,25 @@ data Deal:
     definition: string
     timestamp: string
 
+data FilWorkersV1:
+    chainNetworkId: u64
+    dealId: string
+    dealIdOriginal: string
+    definition: string
+    timestamp: string
+
 data Deals:
-    myDeployment: ?Deal
+    filWorkersV1: ?FilWorkersV1
+    testWorkersV1: ?Deal
 
 func get() -> Deals:
     <- Deals(
-        myDeployment=nil
+        filWorkersV1=?[FilWorkersV1(
+            definition="bafkreid7muqjakatw5cfeemqgf3qg6f4w4rwfdakhbbseezey72yjrt5hm",
+            timestamp="2024-07-14T15:32:37.621Z",
+            dealIdOriginal="0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B",
+            dealId="ce85503de9399d4deca3c0b2bb3e9e7cfcbf9c6b",
+            chainNetworkId=31337
+        )],
+        testWorkersV1=nil
     )

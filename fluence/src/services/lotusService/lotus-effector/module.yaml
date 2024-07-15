@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=../../../../.fluence/schemas/module.json
+version: 1
+
+type: compiled
+
+name: lotus_effector
+
+effects:
+  binaries:
+    lotus: /usr/local/bin/lotus

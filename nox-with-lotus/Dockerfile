@@ -34,6 +34,7 @@ RUN git clone https://github.com/${REPOSITORY}.git --depth 1 --branch $BRANCH &&
     make deps && \
     make $NETWORK lotus-shed lotus-gateway && \
     install -C ./lotus /usr/local/bin/lotus && \
+    install -C ./lotus-gateway /usr/local/bin/lotus-gateway && \
     install -C ./lotus-shed /usr/local/bin/lotus-shed
 
 # RUN FULLNODE_API_INFO=wss://wss.node.glif.io/apigw/lotus lotus daemon --lite

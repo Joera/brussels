@@ -129,7 +129,6 @@ services:
       - --allow-private-ips
       - --local
       - --print-config
-      - FULLNODE_API_INFO=wss://api.chain.love nohup lotus daemon --lite > /dev/null 2>&1
     depends_on:
       ipfs:
         condition: service_healthy
@@ -166,7 +165,6 @@ services:
       - --allow-private-ips
       - --bootstraps=/dns/nox-0/tcp/7771
       - --print-config
-      - FULLNODE_API_INFO=wss://api.chain.love nohup lotus daemon --lite > /dev/null 2>&1
     depends_on:
       ipfs:
         condition: service_healthy

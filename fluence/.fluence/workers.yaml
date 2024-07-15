@@ -5,3 +5,18 @@
 # Documentation: https://github.com/fluencelabs/cli/tree/main/docs/configs/workers.md
 
 version: 1
+
+deals:
+  {
+    local:
+      {
+        filWorkersV1:
+          {
+            definition: bafkreid7muqjakatw5cfeemqgf3qg6f4w4rwfdakhbbseezey72yjrt5hm,
+            timestamp: 2024-07-14T15:32:37.621Z,
+            dealIdOriginal: "0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B",
+            dealId: ce85503de9399d4deca3c0b2bb3e9e7cfcbf9c6b,
+            chainNetworkId: 31337
+          }
+      }
+  }

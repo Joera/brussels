@@ -1,1 +1,16 @@
 aqua Services declares *
+
+
+service LotusService("lotusService"):
+  test() -> bool
+
+
+service TestService("testService"):
+  greeting(name: string) -> string
+
+
+service CioKubo("cioKubo"):
+  add(ipfs_api: string, content: string) -> string
+  addRecursive(ipfs_api: string, path_: string) -> string
+  get(ipfs_api: string, cid: string) -> string
+  getRecursive(ipfs_api: string, cid: string, path_: string) -> string

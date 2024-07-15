@@ -1,0 +1,6 @@
+[workspace]
+members = [
+  "src/services/lotusService/lotusService",
+  "src/services/testService/testService",
+  "src/services/cio-kubo/modules/cioKubo"
+]

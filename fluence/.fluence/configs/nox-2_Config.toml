@@ -24,10 +24,16 @@ enable = [ "aqua-ipfs", "decider" ]
   ipfs_binary_path = "/usr/bin/ipfs"
 
 [effectors.curl]
-wasm_cid = "bafkreids22lgia5bqs63uigw4mqwhsoxvtnkpfqxqy5uwyyerrldsr32ce"
+wasm_cid = "bafybeigrees2ee3zfhpgw7zx2cvjjjb2ryb5m6hry2scrahujakendo2b4"
 
   [effectors.curl.allowed_binaries]
   curl = "/usr/bin/curl"
+
+[effectors.lotus]
+wasm_cid = "bafkreihvaakm74hgh54ssuscpqr7day5xpwr3vcxcohdxaqy6qzmizampy"
+
+  [effectors.lotus.allowed_binaries]
+  lotus = "/usr/local/bin/lotus"
 
 [chain_config]
 http_endpoint = "http://chain-rpc:8545"

@@ -111,15 +111,15 @@ services:
     depends_on:
       - graph-node
   nox-0:
-    image: nox-with-lotus
+    image: fluencelabs/nox:0.23.6
     ports:
       - 7771:7771
       - 9991:9991
     environment:
       WASM_LOG: debug
-      FLUENCE_MAX_SPELL_PARTICLE_TTL: 120s
+      FLUENCE_MAX_SPELL_PARTICLE_TTL: 60s
       FLUENCE_ROOT_KEY_PAIR__PATH: /run/secrets/nox-0
-      RUST_LOG: info
+      RUST_LOG: info,chain_connector=debug,run-console=trace,aquamarine::log=debug,network=trace,worker_inactive=trace,expired=info,spell=debug,ipfs_effector=debug,ipfs_pure=debug,spell_event_bus=trace,system_services=debug,particle_reap=debug,aquamarine::actor=debug,aquamarine::aqua_runtime=off,aquamarine=warn,chain_listener=debug,chain-connector=debug,execution=trace
     command:
       - --config=/run/configs/nox-0_Config.toml
       - --dev-mode
@@ -147,15 +147,15 @@ services:
       timeout: 2s
       retries: 10
   nox-1:
-    image: nox-with-lotus
+    image: fluencelabs/nox:0.23.6
     ports:
       - 7772:7772
       - 9992:9992
     environment:
       WASM_LOG: debug
-      FLUENCE_MAX_SPELL_PARTICLE_TTL: 120s
+      FLUENCE_MAX_SPELL_PARTICLE_TTL: 60s
       FLUENCE_ROOT_KEY_PAIR__PATH: /run/secrets/nox-1
-      RUST_LOG: info
+      RUST_LOG: info,chain_connector=debug,run-console=trace,aquamarine::log=debug,network=trace,worker_inactive=trace,expired=info,spell=debug,ipfs_effector=debug,ipfs_pure=debug,spell_event_bus=trace,system_services=debug,particle_reap=debug,aquamarine::actor=debug,aquamarine::aqua_runtime=off,aquamarine=warn,chain_listener=debug,chain-connector=debug,execution=trace
     command:
       - --config=/run/configs/nox-1_Config.toml
       - --dev-mode
@@ -165,8 +165,6 @@ services:
       - --allow-private-ips
       - --bootstraps=/dns/nox-0/tcp/7771
       - --print-config
-# replace entrypoint.sh
-#- FULLNODE_API_INFO=wss://api.chain.love nohup lotus daemon --lite > /dev/null 2>&1
     depends_on:
       ipfs:
         condition: service_healthy
@@ -185,15 +183,15 @@ services:
       timeout: 2s
       retries: 10
   nox-2:
-    image: nox-with-lotus
+    image: fluencelabs/nox:0.23.6
     ports:
       - 7773:7773
       - 9993:9993
     environment:
       WASM_LOG: debug
-      FLUENCE_MAX_SPELL_PARTICLE_TTL: 120s
+      FLUENCE_MAX_SPELL_PARTICLE_TTL: 60s
       FLUENCE_ROOT_KEY_PAIR__PATH: /run/secrets/nox-2
-      RUST_LOG: info  
+      RUST_LOG: info,chain_connector=debug,run-console=trace,aquamarine::log=debug,network=trace,worker_inactive=trace,expired=info,spell=debug,ipfs_effector=debug,ipfs_pure=debug,spell_event_bus=trace,system_services=debug,particle_reap=debug,aquamarine::actor=debug,aquamarine::aqua_runtime=off,aquamarine=warn,chain_listener=debug,chain-connector=debug,execution=trace
     command:
       - --config=/run/configs/nox-2_Config.toml
       - --dev-mode

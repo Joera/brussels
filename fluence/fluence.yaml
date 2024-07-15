@@ -7,10 +7,15 @@
 version: 8
 
 deployments:
-  myDeployment:
+  filWorkersV1:
     targetWorkers: 3
     pricePerWorkerEpoch: "0.33"
-    services: []
+    services: [ testService, cioKubo, lotusService ]
+    spells: []
+  testWorkersV1:
+    targetWorkers: 3
+    pricePerWorkerEpoch: "0.33"
+    services: [ testService, cioKubo ]
     spells: []
 
 aquaDependencies:
@@ -22,3 +27,14 @@ compileAqua:
     input: src/aqua
     output: src/compiled-aqua
     target: ts
+
+services:
+  lotusService:
+    get: src/services/lotusService
+  testService:
+    get: src/services/testService
+  cioKubo:
+    get: src/services/cio-kubo
+  
+
+defaultSecretKeyName: joera

@@ -10,14 +10,22 @@ providerName: defaultProvider
 
 nox:
   effectors:
+    # curl:
+    #   wasmCID: bafkreids22lgia5bqs63uigw4mqwhsoxvtnkpfqxqy5uwyyerrldsr32ce
+    #   allowedBinaries:
+    #     curl: /usr/bin/curl
     curl:
-      wasmCID: bafkreids22lgia5bqs63uigw4mqwhsoxvtnkpfqxqy5uwyyerrldsr32ce
+      wasmCID: bafybeigrees2ee3zfhpgw7zx2cvjjjb2ryb5m6hry2scrahujakendo2b4
       allowedBinaries:
         curl: /usr/bin/curl
+    # lotus:
+    #   wasmCID: bafkreidv3n3oppxy5ql7ndrxfe3iu2bk7o6btnyp63tfphxzchxqieozfu
+    #   allowedBinaries:
+    #     lotus: /usr/local/bin/lotus
     lotus:
-      wasmCID: bafkreids22lgia5bqs63uigw4mqwhsoxvtnkpfqxqy5uwyyerrldsr32ce
+      wasmCID: bafkreihvaakm74hgh54ssuscpqr7day5xpwr3vcxcohdxaqy6qzmizampy
       allowedBinaries:
-        curl: /usr/local/bin/lotus
+        lotus: /usr/local/bin/lotus
     # lotus-shed:
     #   wasmCID: bafkreids22lgia5bqs63uigw4mqwhsoxvtnkpfqxqy5uwyyerrldsr32ce
     #   allowedBinaries:
@@ -39,7 +47,10 @@ offers:
       - nox-1
       - nox-2
     effectors:
-      - bafkreids22lgia5bqs63uigw4mqwhsoxvtnkpfqxqy5uwyyerrldsr32ce
+      - bafybeigrees2ee3zfhpgw7zx2cvjjjb2ryb5m6hry2scrahujakendo2b4 
+      # - bafkreids22lgia5bqs63uigw4mqwhsoxvtnkpfqxqy5uwyyerrldsr32ce
+      # - bafkreidp2h37mgaaq3bwziotk5itjf74nskqk5jdadjhal3a7xac3agywm
+      - bafkreihvaakm74hgh54ssuscpqr7day5xpwr3vcxcohdxaqy6qzmizampy
 
 capacityCommitments:
   nox-0:
