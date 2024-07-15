@@ -2,7 +2,7 @@
 use marine_rs_sdk::marine;
 use marine_rs_sdk::module_manifest;
 
-// use lotus_effector_imports as lotus; 
+use lotus_effector_imports as lotus; 
 // use lotus_effector_types::{LotusResult};
 
 #[marine]
@@ -51,8 +51,8 @@ pub fn test() -> bool { // lotusResult
     true
 }
 
-#[marine]
-#[module_import("lotus_effector")]
-extern "C" {
-    pub fn cmd(cmd: Vec<String>) -> LotusResult;
-}
+// #[marine]
+// #[module_import("lotus_effector")]
+// extern "C" {
+//     pub fn cmd(cmd: Vec<String>) -> LotusResult;
+// }

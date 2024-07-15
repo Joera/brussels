@@ -8,27 +8,12 @@ data Deal:
     definition: string
     timestamp: string
 
-data FilWorkersV1:
-    chainNetworkId: u64
-    dealId: string
-    dealIdOriginal: string
-    definition: string
-    matched: bool
-    timestamp: string
-
 data Deals:
-    filWorkersV1: ?FilWorkersV1
+    filWorkersV1: ?Deal
     testWorkersV1: ?Deal
 
 func get() -> Deals:
     <- Deals(
-        filWorkersV1=?[FilWorkersV1(
-            definition="bafkreicsdgawahc2m542u4tp3tuusmvis2n5rpbqid23atvwhesmmt4jde",
-            timestamp="2024-07-15T10:22:10.438Z",
-            dealIdOriginal="0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B",
-            dealId="ce85503de9399d4deca3c0b2bb3e9e7cfcbf9c6b",
-            chainNetworkId=31337,
-            matched=true
-        )],
+        filWorkersV1=nil,
         testWorkersV1=nil
     )

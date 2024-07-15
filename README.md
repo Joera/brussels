@@ -19,10 +19,10 @@ docker compose -f .fluence/_docker-compose.yaml up -d
 
 ### temp hacky solution: start lotus daemon manually 
 
-In trustless scenario there would be a filecoin full node running on the same machine 
-for testing you can use one of these api's:
-wss://wss.node.glif.io/apigw/lotus
-wss://api.chain.love
+In trustless scenario there would be a filecoin full node running on the same machine \
+for testing you can use one of these api's: 
+* wss://wss.node.glif.io/apigw/lotus 
+* wss://api.chain.love
 
 
 ```
@@ -35,7 +35,7 @@ FULLNODE_API_INFO=wss://api.chain.love && nohup lotus daemon --lite > /dev/null 
 
 ```
 
-### test internal use of binary 
+### test manual use of binary 
 
 ```
 docker exec -ti fluence-nox-0-1 bash
