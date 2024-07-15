@@ -2,7 +2,8 @@
 use marine_rs_sdk::marine;
 use marine_rs_sdk::module_manifest;
 
-// use lotus_effector_imports as lotus; //lotus_cmd;
+// use lotus_effector_imports as lotus; 
+// use lotus_effector_types::{LotusResult};
 
 #[marine]
 #[derive(Clone, Debug)]
@@ -37,7 +38,15 @@ module_manifest!();
 pub fn main() {}
 
 #[marine]
-pub fn test() -> bool {
+pub fn test() -> bool { // lotusResult 
+
+    // let args = vec![
+    //     String::from("state"),
+    //     String::from("get-actor"),
+    //     String::from("f05")
+    // ]
+
+    // // lotus::cmd(args)
 
     true
 }

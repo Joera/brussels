@@ -10,12 +10,12 @@ deployments:
   filWorkersV1:
     targetWorkers: 3
     pricePerWorkerEpoch: "0.33"
-    services: [ testService, cioKubo, lotusService ]
+    services: [ testService, lotusService ]
     spells: []
   testWorkersV1:
     targetWorkers: 3
     pricePerWorkerEpoch: "0.33"
-    services: [ testService, cioKubo ]
+    services: [ testService ]
     spells: []
 
 aquaDependencies:
@@ -33,8 +33,6 @@ services:
     get: src/services/lotusService
   testService:
     get: src/services/testService
-  cioKubo:
-    get: src/services/cio-kubo
   
 
 defaultSecretKeyName: joera

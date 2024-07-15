@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../../../.fluence/schemas/module.json
+# yaml-language-server: $schema=../../../../../.fluence/schemas/module.json
 
 # Defines Marine Module. You can use `fluence module new` command to generate a template for new module
 

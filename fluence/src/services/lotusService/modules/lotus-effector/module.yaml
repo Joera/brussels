@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=../../../../.fluence/schemas/module.json
+# yaml-language-server: $schema=../../../../../.fluence/schemas/module.json
 version: 1
 
 type: compiled

@@ -13,6 +13,7 @@ data FilWorkersV1:
     dealId: string
     dealIdOriginal: string
     definition: string
+    matched: bool
     timestamp: string
 
 data Deals:
@@ -22,11 +23,12 @@ data Deals:
 func get() -> Deals:
     <- Deals(
         filWorkersV1=?[FilWorkersV1(
-            definition="bafkreid7muqjakatw5cfeemqgf3qg6f4w4rwfdakhbbseezey72yjrt5hm",
-            timestamp="2024-07-14T15:32:37.621Z",
+            definition="bafkreicsdgawahc2m542u4tp3tuusmvis2n5rpbqid23atvwhesmmt4jde",
+            timestamp="2024-07-15T10:22:10.438Z",
             dealIdOriginal="0xCe85503De9399D4dECa3c0b2bb3e9e7CFCBf9C6B",
             dealId="ce85503de9399d4deca3c0b2bb3e9e7cfcbf9c6b",
-            chainNetworkId=31337
+            chainNetworkId=31337,
+            matched=true
         )],
         testWorkersV1=nil
     )
